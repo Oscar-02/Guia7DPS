@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Guia7DPS",
+    "slug": "Guia7DPS",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Guia7DPS"
+}
