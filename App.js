@@ -19,16 +19,26 @@ export default function App() {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Modal transparent={true} visible={modalVisibleplaya} animationType="slide" onRequestClose={() => {
-          alert("Modal has been closed.");
-        }}>
+        <Modal
+          transparent={true}
+          visible={modalVisibleplaya}
+          animationType="slide"
+          onRequestClose={() => {
+            alert("Modal has been closed.");
+          }}
+        >
           <View style={styles.vistaModal}>
             <View style={styles.Modal}>
               <Text style={styles.subtitulo}>Ir a la playa</Text>
               <Text>
                 El Salvador cuenta con hermosas playas a nivel centroamericano.
               </Text>
-              <Button title="Cerrar" onPress={() => {setModalVisibleplaya(!modalVisibleplaya);}}></Button>
+              <Button
+                title="Cerrar"
+                onPress={() => {
+                  setModalVisibleplaya(!modalVisibleplaya);
+                }}
+              ></Button>
             </View>
           </View>
         </Modal>
@@ -39,10 +49,16 @@ export default function App() {
           <Text style={styles.titulo}>Que hacer en El Salvador</Text>
           <ScrollView horizontal>
             <View>
-              <Image
-                style={styles.ciudad}
-                source={require("./img/actividad1.jpg")}
-              />
+              <TouchableHighlight
+                onPress={() => {
+                  setModalVisibleplaya(!modalVisibleplaya);
+                }}
+              >
+                <Image
+                  style={styles.ciudad}
+                  source={require("./img/actividad1.jpg")}
+                />
+              </TouchableHighlight>
             </View>
             <View>
               <Image
